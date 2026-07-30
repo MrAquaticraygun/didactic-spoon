@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="theme-color" content="#0f1720" />
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
+    <title>SkateMap GPS</title>
+    <link rel="stylesheet" href="styles.css" />
+    <link rel="manifest" href="manifest.json" />
+    <link rel="apple-touch-icon" href="icon.svg" />
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" integrity="sha512-sA+ePHZCkWnX2s0ohmGSkU5Djh1rQfOtQqIUiKVhm0DzR1i2lfeeKj1Vqq7bf9EUd7qGICvhjUKxi8YwQq4sQw==" crossorigin="" />
+  </head>
+  <body>
+    <div class="app-shell">
+      <header>
+        <h1>SkateMap</h1>
+        <p>Live GPS navigation for skateboarders with nearby skate spot highlights.</p>
+      </header>
+
+      <main>
+        <section class="map-panel">
+          <div id="map"></div>
+        </section>
+
+        <aside class="info-panel">
+          <div class="status-card">
+            <h2>Rider Dashboard</h2>
+            <p id="status">Waiting for GPS...</p>
+            <dl>
+              <div>
+                <dt>Latitude</dt>
+                <dd id="latitude">—</dd>
+              </div>
+              <div>
+                <dt>Longitude</dt>
+                <dd id="longitude">—</dd>
+              </div>
+              <div>
+                <dt>Speed</dt>
+                <dd id="speed">—</dd>
+              </div>
+              <div>
+                <dt>Heading</dt>
+                <dd id="heading">—</dd>
+              </div>
+              <div>
+                <dt>Accuracy</dt>
+                <dd id="accuracy">—</dd>
+              </div>
+            </dl>
+          </div>
+
+          <div class="spots-card">
+            <h2>Nearby Skate Spots</h2>
+            <ul id="spotList">
+              <li>Move around and allow GPS to load to see nearby spots.</li>
+            </ul>
+          </div>
+        </aside>
+      </main>
+
+      <footer>
+        <p>Powered by OpenStreetMap and browser geolocation. Designed for skateboard route awareness and local skate spots.</p>
+      </footer>
+    </div>
+
+    <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js" integrity="sha512-XQoYMqMTK8LvdxXYG3nZ448hOEQiglfqkJs1NOQV44cWnUrBc8PkAOcXy20w0vlaXaVUearIOBhiXZ5V3ynxwA==" crossorigin=""></script>
+    <script src="script.js"></script>
+  </body>
+</html>
