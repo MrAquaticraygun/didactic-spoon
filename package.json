@@ -1,0 +1,13 @@
+{
+  "name": "didactic-spoon",
+  "version": "1.0.0",
+  "description": "A webpack project",
+  "main": "index.js",
+  "scripts": {
+    "build": "webpack"
+  },
+  "devDependencies": {
+    "webpack": "^5.0.0",
+    "webpack-cli": "^5.0.0"
+  }
+}
